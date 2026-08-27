@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- "What we do" — four service tiles + a cat mascot overseeing. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img"
+     aria-label="What we do">
+  <defs>
+    <linearGradient id="svc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6F7FB"/>
+      <stop offset="1" stop-color="#ECEFF5"/>
+    </linearGradient>
+    <linearGradient id="svc-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F6F7FB"/>
+    </linearGradient>
+    <linearGradient id="svc-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A52FF"/>
+      <stop offset="1" stop-color="#7EC8FF"/>
+    </linearGradient>
+    <symbol id="svc-cat" viewBox="0 0 200 200">
+      <polygon points="55,80 65,28 100,68" fill="#7EC8FF"/>
+      <polygon points="145,80 135,28 100,68" fill="#7EC8FF"/>
+      <polygon points="65,68 72,40 90,64" fill="#C5A8FF"/>
+      <polygon points="135,68 128,40 110,64" fill="#C5A8FF"/>
+      <path d="M44 100 Q44 40 100 40 Q156 40 156 100 Q156 158 100 170 Q44 158 44 100 Z" fill="#7EC8FF"/>
+      <path d="M64 116 Q100 158 136 116 Q132 144 100 156 Q68 144 64 116 Z" fill="#F0F7FF"/>
+      <ellipse cx="80" cy="98" rx="6" ry="9" fill="#1A1F2C"/>
+      <ellipse cx="120" cy="98" rx="6" ry="9" fill="#1A1F2C"/>
+      <circle cx="81" cy="94" r="1.8" fill="#FFFFFF"/>
+      <circle cx="121" cy="94" r="1.8" fill="#FFFFFF"/>
+      <path d="M96 118 L104 118 L100 124 Z" fill="#FF8A6B"/>
+      <line x1="70" y1="124" x2="50" y2="122" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="70" y1="130" x2="50" y2="132" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="130" y1="124" x2="150" y2="122" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="130" y1="130" x2="150" y2="132" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M100 124 Q92 134 88 132" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M100 124 Q108 134 112 132" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect width="800" height="600" rx="32" fill="url(#svc-bg)"/>
+
+  <!-- Decorative blobs -->
+  <circle cx="120" cy="100" r="120" fill="#C5A8FF" opacity="0.18"/>
+  <circle cx="700" cy="500" r="140" fill="#7EC8FF" opacity="0.18"/>
+
+  <!-- Service tile grid (2x2) -->
+  <g transform="translate(60 80)">
+    <!-- Tile 1 — Apps / gamepad -->
+    <g>
+      <rect width="200" height="200" rx="20" fill="url(#svc-card)" stroke="#D6DAE3"/>
+      <rect x="0" y="0" width="200" height="6" rx="3" fill="url(#svc-accent)"/>
+      <g transform="translate(60 40)">
+        <path d="M10 28 H70 A18 18 0 0 1 88 46 V56 A18 18 0 0 1 70 74 H66 L56 60 H24 L14 74 H10 A18 18 0 0 1 -8 56 V46 A18 18 0 0 1 10 28 Z"
+              fill="none" stroke="#2A52FF" stroke-width="3" stroke-linejoin="round" transform="translate(0 0)"/>
+        <line x1="14" y1="52" x2="14.01" y2="52" stroke="#2A52FF" stroke-width="3" stroke-linecap="round"/>
+        <line x1="6" y1="46" x2="6.01" y2="46" stroke="#2A52FF" stroke-width="3" stroke-linecap="round"/>
+        <line x1="6" y1="58" x2="6.01" y2="58" stroke="#2A52FF" stroke-width="3" stroke-linecap="round"/>
+        <line x1="22" y1="52" x2="22.01" y2="52" stroke="#2A52FF" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="62" cy="50" r="3" fill="#2A52FF"/>
+        <circle cx="70" cy="58" r="3" fill="#2A52FF"/>
+      </g>
+      <text x="100" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="14" font-weight="600" fill="#11151F">Casual Games</text>
+      <text x="100" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="11" fill="#4A5063">Single-player &amp; daily fun</text>
+    </g>
+
+    <!-- Tile 2 — Mobile management -->
+    <g transform="translate(220 0)">
+      <rect width="200" height="200" rx="20" fill="url(#svc-card)" stroke="#D6DAE3"/>
+      <rect x="0" y="0" width="200" height="6" rx="3" fill="url(#svc-accent)"/>
+      <g transform="translate(72 30)">
+        <rect x="0" y="0" width="56" height="100" rx="10" fill="none" stroke="#7EC8FF" stroke-width="3"/>
+        <line x1="14" y1="88" x2="42" y2="88" stroke="#7EC8FF" stroke-width="3" stroke-linecap="round"/>
+        <rect x="8" y="14" width="40" height="8" rx="4" fill="#7EC8FF"/>
+        <rect x="8" y="28" width="40" height="8" rx="4" fill="#C5A8FF" opacity="0.6"/>
+        <rect x="8" y="42" width="28" height="6" rx="3" fill="#7EC8FF" opacity="0.6"/>
+        <circle cx="46" cy="60" r="6" fill="#FFD86B"/>
+      </g>
+      <text x="100" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="14" font-weight="600" fill="#11151F">Mobile Manager</text>
+      <text x="100" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="11" fill="#4A5063">Run your studio on the go</text>
+    </g>
+
+    <!-- Tile 3 — Marketing / megaphone -->
+    <g transform="translate(440 0)">
+      <rect width="200" height="200" rx="20" fill="url(#svc-card)" stroke="#D6DAE3"/>
+      <rect x="0" y="0" width="200" height="6" rx="3" fill="url(#svc-accent)"/>
+      <g transform="translate(56 40)" fill="none" stroke="#FF8A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 30 V50 A4 4 0 0 0 6 54 H20 L52 70 V10 L20 26 H6 A4 4 0 0 0 2 30 Z"/>
+        <path d="M62 22 C72 28 72 52 62 58"/>
+        <path d="M22 54 V70 A6 6 0 0 0 32 70 V58"/>
+      </g>
+      <text x="100" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="14" font-weight="600" fill="#11151F">User Acquisition</text>
+      <text x="100" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="11" fill="#4A5063">Ads, ASO &amp; creatives</text>
+    </g>
+
+    <!-- Tile 4 — Design / palette -->
+    <g transform="translate(0 220)">
+      <rect width="200" height="200" rx="20" fill="url(#svc-card)" stroke="#D6DAE3"/>
+      <rect x="0" y="0" width="200" height="6" rx="3" fill="url(#svc-accent)"/>
+      <g transform="translate(60 38)">
+        <path d="M40 6 A36 36 0 1 0 40 78 A8 8 0 0 0 48 70 V66 A8 8 0 0 1 56 58 H64 A16 16 0 0 0 80 42 C80 22 62 6 40 6 Z"
+              fill="none" stroke="#C5A8FF" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="22" cy="42" r="3" fill="#2A52FF"/>
+        <circle cx="36" cy="22" r="3" fill="#FF8A6B"/>
+        <circle cx="56" cy="28" r="3" fill="#FFD86B"/>
+      </g>
+      <text x="100" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="14" font-weight="600" fill="#11151F">Brand &amp; Design</text>
+      <text x="100" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="11" fill="#4A5063">Identity, UI &amp; motion</text>
+    </g>
+
+    <!-- Tile 5 — Cloud -->
+    <g transform="translate(220 220)">
+      <rect width="200" height="200" rx="20" fill="url(#svc-card)" stroke="#D6DAE3"/>
+      <rect x="0" y="0" width="200" height="6" rx="3" fill="url(#svc-accent)"/>
+      <g transform="translate(50 50)">
+        <path d="M22 70 A20 20 0 0 1 22 34 A26 26 0 0 1 72 38 A18 18 0 0 1 70 70 Z"
+              fill="none" stroke="#6BE3B7" stroke-width="3" stroke-linejoin="round"/>
+      </g>
+      <text x="100" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="14" font-weight="600" fill="#11151F">Cloud &amp; APIs</text>
+      <text x="100" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="11" fill="#4A5063">Realtime data &amp; sync</text>
+    </g>
+
+    <!-- Tile 6 — Support -->
+    <g transform="translate(440 220)">
+      <rect width="200" height="200" rx="20" fill="url(#svc-card)" stroke="#D6DAE3"/>
+      <rect x="0" y="0" width="200" height="6" rx="3" fill="url(#svc-accent)"/>
+      <g transform="translate(64 50)" fill="none" stroke="#2A52FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36 2 L72 14 V42 C72 60 56 72 36 78 C16 72 0 60 0 42 V14 Z"/>
+        <polyline points="18,40 30,52 54,28"/>
+      </g>
+      <text x="100" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="14" font-weight="600" fill="#11151F">Always-on Support</text>
+      <text x="100" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+            font-size="11" fill="#4A5063">Timezone-friendly team</text>
+    </g>
+  </g>
+
+  <!-- Cat mascot peeking from the right edge -->
+  <g transform="translate(640 320)">
+    <use href="#svc-cat" x="0" y="0" width="180" height="180"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#FFD86B">
+    <path d="M700 110 L704 118 L712 122 L704 126 L700 134 L696 126 L688 122 L696 118 Z"/>
+    <path d="M40  500 L43  506 L49  509 L43  512 L40  518 L37  512 L31  509 L37  506 Z" opacity="0.8"/>
+  </g>
+</svg>

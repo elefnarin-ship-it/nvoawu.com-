@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0D14" />
+  <title>N VoaWu Studio — Indie Mobile Apps &amp; Management Suite</title>
+  <meta name="description" content="Independent studio building casual games, everyday utility apps, and a mobile management suite. Published on Google Play and the App Store for users worldwide." />
+  <link rel="canonical" href="https://nvoawu.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="N VoaWu Studio" />
+
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="apple-touch-icon" href="images/favicon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="N VoaWu" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="N VoaWu Studio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="N VoaWu Studio — Indie Mobile Apps &amp; Management Suite" />
+  <meta property="og:description" content="Independent studio building casual games, everyday utility apps, and a mobile management suite. Published on Google Play and the App Store for users worldwide." />
+  <meta property="og:url" content="https://nvoawu.com/" />
+  <meta property="og:image" content="https://nvoawu.com/images/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="N VoaWu Studio logo with the arctic-fox mascot" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@nvoawu" />
+  <meta name="twitter:creator" content="@nvoawu" />
+  <meta name="twitter:title" content="N VoaWu Studio — Indie Mobile Apps &amp; Management Suite" />
+  <meta name="twitter:description" content="Independent studio building casual games, everyday utility apps, and a mobile management suite." />
+  <meta name="twitter:image" content="https://nvoawu.com/images/og-cover.png" />
+  <meta name="twitter:image:alt" content="N VoaWu Studio logo with the arctic-fox mascot" />
+
+  <!-- Preconnect / styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "N VoaWu Studio",
+    "url": "https://nvoawu.com/",
+    "logo": "https://nvoawu.com/images/logo.svg",
+    "description": "Independent European studio building casual games, everyday utility apps, and a mobile management suite.",
+    "email": "elefnarin@gmail.com",
+    "sameAs": [
+      "https://twitter.com/nvoawu",
+      "https://www.linkedin.com/company/nvoawu",
+      "https://github.com/elefnarin-ship-it",
+      "https://www.youtube.com/@nvoawu",
+      "https://discord.gg/nvoawu"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "N VoaWu Studio",
+    "url": "https://nvoawu.com/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "N VoaWu Studio",
+      "url": "https://nvoawu.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="/" aria-label="N VoaWu Studio — home">
+        <span class="site-header__logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 11 L11 4 L21 4 L27 11 L27 21 L21 28 L11 28 L5 21 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="rgba(255,255,255,0.08)"/>
+            <path d="M11 12 L11 22 M11 17 L17 17 M21 12 L21 22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="22.5" cy="9.5" r="1.2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span>
+          <span class="site-header__wordmark">N VoaWu</span>
+          <span class="site-header__wordmark--sub">Studio</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+          <svg aria-hidden="true" focusable="false"><use href="images/icons.svg#icon-menu" /></svg>
+        </button>
+        <ul id="primary-nav" class="nav__list">
+          <li><a class="nav__link" href="/" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="/#our-apps">Apps</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+          <li class="nav__cta"><a class="btn btn--accent btn--magnetic" href="contact.html#quote">Get a quote<span aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><use href="images/icons.svg#icon-arrow-right" /></svg></span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy reveal">
+            <span class="hero__eyebrow"><span class="dot" aria-hidden="true"></span> Independent · European · Multi-platform</span>
+            <h1 id="hero-title" class="hero__title">Crafted apps for everyday people — and the <em>teams who run them.</em></h1>
+            <p class="hero__lead">
+              N VoaWu is an independent studio shipping casual games and everyday utility apps
+              on Google Play and the App Store, plus a mobile management suite that helps small
+              and mid-size teams run their day-to-day operations from a phone. We build the
+              kind of software we want on our own devices: fast, friendly, and a little bit fun. <span class="emoji">🦊</span>
+            </p>
+            <div class="hero__ctas">
+              <a class="btn btn--lg btn--magnetic" href="#our-apps">Explore our apps
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-right" /></svg>
+              </a>
+              <a class="btn btn--lg btn--ghost" href="contact.html">Talk to the studio</a>
+            </div>
+            <dl class="hero__stats" aria-label="Studio highlights">
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Apps shipped</dt>
+                <dd class="hero__stat-value">12+</dd>
+              </div>
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Lifetime downloads</dt>
+                <dd class="hero__stat-value">4M+</dd>
+              </div>
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Countries reached</dt>
+                <dd class="hero__stat-value">27</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__art reveal reveal--right reveal--delay-2" aria-hidden="true">
+            <div class="hero__art-frame">
+              <div class="hero__art-stars">
+                <span class="hero__art-star hero__art-star--1">✦</span>
+                <span class="hero__art-star hero__art-star--2">✦</span>
+                <span class="hero__art-star hero__art-star--3">✦</span>
+                <span class="hero__art-star hero__art-star--4">✦</span>
+              </div>
+              <div class="hero__art-mascot parallax" data-depth="0.6">
+                <picture>
+                  <source srcset="images/hero-illustration.svg" type="image/svg+xml" />
+                  <img src="images/hero-illustration@2x.png" alt="" width="1024" height="682" loading="eager" fetchpriority="high" />
+                </picture>
+              </div>
+              <span class="hero__art-bubble hero__art-bubble--1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-spark" /></svg>
+                v1.0 just shipped ✨
+              </span>
+              <span class="hero__art-bubble hero__art-bubble--2">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-rocket" /></svg>
+                11 languages ready
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE / TRUST -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item"><span class="dot"></span> Indie game studio</span>
+        <span class="marquee__item"><span class="dot"></span> Casual mobile games for Android &amp; iOS</span>
+        <span class="marquee__item"><span class="dot"></span> Mobile app development studio</span>
+        <span class="marquee__item"><span class="dot"></span> Mobile management app for field teams</span>
+        <span class="marquee__item"><span class="dot"></span> 11 languages · 27 countries</span>
+        <span class="marquee__item"><span class="dot"></span> WCAG 2.1 AA accessibility</span>
+        <span class="marquee__item"><span class="dot"></span> Indie game studio</span>
+        <span class="marquee__item"><span class="dot"></span> Casual mobile games for Android &amp; iOS</span>
+        <span class="marquee__item"><span class="dot"></span> Mobile app development studio</span>
+        <span class="marquee__item"><span class="dot"></span> Mobile management app for field teams</span>
+        <span class="marquee__item"><span class="dot"></span> 11 languages · 27 countries</span>
+        <span class="marquee__item"><span class="dot"></span> WCAG 2.1 AA accessibility</span>
+      </div>
+    </div>
+
+    <!-- WHAT WE DO -->
+    <section class="section section--alt" aria-labelledby="what-we-do">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">What we do</span>
+          <h2 id="what-we-do" class="section__title">One studio, three kinds of software.</h2>
+          <p class="section__lead">
+            We started N VoaWu to make small, well-crafted software — the sort of thing
+            that lives on a home screen for years. Today that means three lines of work,
+            each run by a small senior team with a clear point of view. <span class="emoji">🎮</span>
+          </p>
+        </div>
+
+        <div class="card-grid stagger">
+          <article class="card feature-card reveal">
+            <div class="feature-card__head">
+              <div class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-gamepad" /></svg>
+              </div>
+              <h3 class="feature-card__title">Indie games</h3>
+            </div>
+            <p class="feature-card__desc">
+              Single-player casual games designed for a quick coffee break or a long
+              evening. Always offline-first, always fair. <span class="emoji">🃏</span>
+            </p>
+          </article>
+
+          <article class="card feature-card reveal reveal--delay-1">
+            <div class="feature-card__head">
+              <div class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-bolt" /></svg>
+              </div>
+              <h3 class="feature-card__title">Everyday utility apps</h3>
+            </div>
+            <p class="feature-card__desc">
+              Quietly useful tools for weather, notes, focus, file hygiene, and the
+              small chores phones were actually built for. <span class="emoji">🧰</span>
+            </p>
+          </article>
+
+          <article class="card feature-card reveal reveal--delay-2">
+            <div class="feature-card__head">
+              <div class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-cube" /></svg>
+              </div>
+              <h3 class="feature-card__title">Mobile management suite</h3>
+            </div>
+            <p class="feature-card__desc">
+              A white-label management app that lets small businesses, schools, and
+              field teams run their operations from a pocket-sized dashboard. <span class="emoji">📋</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS + MANAGEMENT -->
+    <section class="section" aria-labelledby="apps-and-management">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Apps + management</span>
+          <h2 id="apps-and-management" class="section__title">Casual games and utility apps you already love — plus a serious mobile operations suite.</h2>
+          <p class="section__lead">
+            The studio publishes its own catalog of consumer apps on Google Play and the
+            App Store, and we license our <strong>mobile management app</strong> to organizations that
+            need a reliable, opinionated way to run people, tasks, and field reporting
+            from a phone. Both sides of the studio share the same design system, the same
+            release process, and the same obsession with how an app feels on a Tuesday
+            morning at 8:14 a.m.
+          </p>
+        </div>
+
+        <div class="two-col-features stagger">
+          <article class="feature-block reveal">
+            <h3><span class="emoji" aria-hidden="true">📱</span> Consumer apps — built for the home screen.</h3>
+            <ul>
+              <li>Native iOS and native Android, no half-baked web wrappers.</li>
+              <li>Localization in 11 languages, plus region-tuned pricing.</li>
+              <li>Accessibility audited (WCAG 2.1 AA where feasible).</li>
+            </ul>
+          </article>
+
+          <article class="feature-block feature-block--alt reveal reveal--delay-1">
+            <h3><span class="emoji" aria-hidden="true">🛰️</span> Mobile management app — built for the field.</h3>
+            <ul>
+              <li>Role-based access for staff, managers, and admins.</li>
+              <li>Offline-first sync with conflict resolution and audit log.</li>
+              <li>Integrations with the calendar, files, and identity tools your team already uses.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="feature-block__links reveal">
+          <a class="link-inline" href="services.html#catalog">See the full app catalog
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-right" /></svg>
+          </a>
+          <a class="link-inline" href="contact.html#demo">Request a management-suite demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-right" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR APPS -->
+    <section class="section section--alt" id="our-apps" aria-labelledby="our-apps-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Our apps</span>
+          <h2 id="our-apps-title" class="section__title">A few favorites from the catalog.</h2>
+          <p class="section__lead">
+            Six shipped products, with more in beta. Every title is hand-built, no template
+            reskins, and every title earns its place on the home screen. <span class="emoji">🎯</span>
+          </p>
+        </div>
+
+        <div class="card-grid stagger" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <article class="app-card reveal">
+            <div class="app-card__top">
+              <div class="app-card__icon app-card__icon--meteorology" aria-hidden="true">⛅</div>
+              <div>
+                <h3 class="app-card__title">Pocket Meteorology</h3>
+                <span class="app-card__cat">Utilities · Weather</span>
+              </div>
+            </div>
+            <p class="app-card__desc">A weather app that explains itself, in plain language, in 11 languages.</p>
+            <a class="app-card__cta" href="https://play.google.com/store/apps/details?id=com.nvoawu.pocketmeteorology" target="_blank" rel="noopener noreferrer">
+              Get it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-up-right" /></svg>
+            </a>
+          </article>
+
+          <article class="app-card reveal reveal--delay-1">
+            <div class="app-card__top">
+              <div class="app-card__icon app-card__icon--solitaire" aria-hidden="true">🂡</div>
+              <div>
+                <h3 class="app-card__title">Foxglove Solitaire</h3>
+                <span class="app-card__cat">Games · Card</span>
+              </div>
+            </div>
+            <p class="app-card__desc">A single-player Klondike reimagined for five-minute breaks.</p>
+            <a class="app-card__cta" href="https://play.google.com/store/apps/details?id=com.nvoawu.foxglove" target="_blank" rel="noopener noreferrer">
+              Get it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-up-right" /></svg>
+            </a>
+          </article>
+
+          <article class="app-card reveal reveal--delay-2">
+            <div class="app-card__top">
+              <div class="app-card__icon app-card__icon--tidy" aria-hidden="true">🧹</div>
+              <div>
+                <h3 class="app-card__title">Tidy Tray</h3>
+                <span class="app-card__cat">Utilities · Productivity</span>
+              </div>
+            </div>
+            <p class="app-card__desc">A decluttering assistant for downloads, photos, and forgotten files.</p>
+            <a class="app-card__cta" href="https://play.google.com/store/apps/details?id=com.nvoawu.tidytray" target="_blank" rel="noopener noreferrer">
+              Get it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-up-right" /></svg>
+            </a>
+          </article>
+
+          <article class="app-card reveal reveal--delay-3">
+            <div class="app-card__top">
+              <div class="app-card__icon app-card__icon--trails" aria-hidden="true">👣</div>
+              <div>
+                <h3 class="app-card__title">Tiny Trails</h3>
+                <span class="app-card__cat">Games · Casual</span>
+              </div>
+            </div>
+            <p class="app-card__desc">A cozy hand-drawn endless-runner. No timers, no scores, just walking.</p>
+            <a class="app-card__cta" href="https://play.google.com/store/apps/details?id=com.nvoawu.tinytrails" target="_blank" rel="noopener noreferrer">
+              Get it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-up-right" /></svg>
+            </a>
+          </article>
+
+          <article class="app-card reveal reveal--delay-4">
+            <div class="app-card__top">
+              <div class="app-card__icon app-card__icon--fieldkeeper" aria-hidden="true">🛰️</div>
+              <div>
+                <h3 class="app-card__title">FieldKeeper</h3>
+                <span class="app-card__cat">Business · Management</span>
+              </div>
+            </div>
+            <p class="app-card__desc">The mobile management app for teams in the field. Schedule, report, audit.</p>
+            <a class="app-card__cta" href="https://play.google.com/store/apps/details?id=com.nvoawu.fieldkeeper" target="_blank" rel="noopener noreferrer">
+              Get it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-up-right" /></svg>
+            </a>
+          </article>
+
+          <article class="app-card reveal reveal--delay-5">
+            <div class="app-card__top">
+              <div class="app-card__icon app-card__icon--loom" aria-hidden="true">🧵</div>
+              <div>
+                <h3 class="app-card__title">Loom Calm</h3>
+                <span class="app-card__cat">Productivity · Focus</span>
+              </div>
+            </div>
+            <p class="app-card__desc">A focus timer with ambient textures, no subscriptions, no accounts.</p>
+            <a class="app-card__cta" href="https://play.google.com/store/apps/details?id=com.nvoawu.loomcalm" target="_blank" rel="noopener noreferrer">
+              Get it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-arrow-up-right" /></svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="store-row reveal" style="margin-top: var(--space-7); justify-content: center;">
+          <a class="store-badge" href="https://play.google.com/store/apps/dev?id=0000000000000000000" target="_blank" rel="noopener noreferrer" aria-label="See every app on Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M3.6 1.8a1.2 1.2 0 0 0-.6 1v18.4a1.2 1.2 0 0 0 .6 1l11-10.2L3.6 1.8zm12.5 11.2l3-1.7-13-7.4 10 9.1zm0-2L6.1 1.9l13 7.4-3 1.7zm3 1.7l3.4-1.9c1.1-.6 1.1-2.2 0-2.8l-3.4-2-3 1.7 3 2zm0 0l-3-2 3-1.7 3 2-3 1.7z"/></svg>
+            <span class="store-badge__col">
+              <span class="store-badge__small">Get it on</span>
+              <span class="store-badge__big">Google Play</span>
+            </span>
+          </a>
+          <a class="store-badge" href="https://apps.apple.com/developer/n-voawu-studio/id000000000" target="_blank" rel="noopener noreferrer" aria-label="See every app on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.5 2.6c0 1.2-.5 2.3-1.3 3.1-.9.9-2.1 1.6-3.2 1.5-.1-1.1.5-2.3 1.2-3.1.9-.9 2.2-1.5 3.3-1.5zM20.6 17c-.5 1.1-.8 1.6-1.4 2.5-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9-1.9 0-2.3.9-3.7.9-1.6 0-2.8-1.6-3.7-3-.6-.9-2.2-3.4-2.2-6.5 0-4 2.6-6.2 5.2-6.2 1.4 0 2.5.9 3.4.9.8 0 2.1-1 3.7-1 .6 0 2.5.1 3.7 1.9-3.2 1.7-2.7 6.1.5 8.3z"/></svg>
+            <span class="store-badge__col">
+              <span class="store-badge__small">Download on the</span>
+              <span class="store-badge__big">App Store</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section" aria-labelledby="why-us">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Why us</span>
+          <h2 id="why-us" class="section__title">Six things we won't compromise on.</h2>
+        </div>
+
+        <ul class="why-list stagger">
+          <li class="why-row reveal">
+            <div class="why-row__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-palette" /></svg></div>
+            <div>
+              <h3 class="why-row__title">Crafted, not assembled.</h3>
+              <p class="why-row__desc">Every screen is hand-drawn or hand-coded; no template reskins, no copy-paste UX.</p>
+            </div>
+          </li>
+          <li class="why-row reveal reveal--delay-1">
+            <div class="why-row__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-shield" /></svg></div>
+            <div>
+              <h3 class="why-row__title">Honest monetization.</h3>
+              <p class="why-row__desc">Ads are clearly labeled; in-app purchases are clearly priced; no dark patterns.</p>
+            </div>
+          </li>
+          <li class="why-row reveal reveal--delay-2">
+            <div class="why-row__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-globe" /></svg></div>
+            <div>
+              <h3 class="why-row__title">Localization is a first-class feature, not an afterthought.</h3>
+              <p class="why-row__desc">Eleven languages at launch, with strings never machine-translated without review.</p>
+            </div>
+          </li>
+          <li class="why-row reveal reveal--delay-3">
+            <div class="why-row__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-lock" /></svg></div>
+            <div>
+              <h3 class="why-row__title">Privacy by default.</h3>
+              <p class="why-row__desc">On-device processing where it makes sense; minimal analytics; never sell personal data.</p>
+            </div>
+          </li>
+          <li class="why-row reveal reveal--delay-4">
+            <div class="why-row__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-cloud" /></svg></div>
+            <div>
+              <h3 class="why-row__title">Independent and stable.</h3>
+              <p class="why-row__desc">We self-fund and reinvest. The studio has been operating continuously since day one.</p>
+            </div>
+          </li>
+          <li class="why-row reveal reveal--delay-5">
+            <div class="why-row__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="images/icons.svg#icon-megaphone" /></svg></div>
+            <div>
+              <h3 class="why-row__title">Senior teams only.</h3>
+              <p class="why-row__desc">No junior pyramid; the person you brief is the person who builds.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MASCOTS -->
+    <section class="section section--gradient" aria-labelledby="mascots">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Meet the mascots</span>
+          <h2 id="mascots" class="section__title">Our mascots show up everywhere — the store page, the splash screen, the release notes.</h2>
+          <p class="section__lead">
+            The studio is a small zoo. Each mascot leads a different part of the product
+            line, and you can find them in the apps, on the website, and in our seasonal
+            wallpapers. They are drawn by an in-house illustrator and shipped in SVG so
+            they scale on every device. <span class="emoji">🐼</span>
+          </p>
+        </div>
+
+        <div class="mascot-grid stagger">
+          <article class="mascot-card reveal" style="--cute: #93AEFF;">
+            <div class="mascot-card__art" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><use href="images/mascots.svg#mascot-fox" /></svg>
+            </div>
+            <p class="mascot-card__role">Lead mascot</p>
+            <h3 class="mascot-card__name">Frosti the Arctic Fox</h3>
+            <p class="mascot-card__personality">Curious, a little too clever.</p>
+          </article>
+
+          <article class="mascot-card reveal reveal--delay-1" style="--cute: #FFB3D1;">
+            <div class="mascot-card__art" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><use href="images/mascots.svg#mascot-panda" /></svg>
+            </div>
+            <p class="mascot-card__role">Casual-games captain</p>
+            <h3 class="mascot-card__name">Pepper the Hedgehog</h3>
+            <p class="mascot-card__personality">Hates tutorials.</p>
+          </article>
+
+          <article class="mascot-card reveal reveal--delay-2" style="--cute: #FFC2A1;">
+            <div class="mascot-card__art" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><use href="images/mascots.svg#mascot-cat" /></svg>
+            </div>
+            <p class="mascot-card__role">Management suite</p>
+            <h3 class="mascot-card__name">Maple the Red Panda</h3>
+            <p class="mascot-card__personality">Keeps the queue tidy.</p>
+          </article>
+
+          <article class="mascot-card reveal reveal--delay-3" style="--cute: #FFD86B;">
+            <div class="mascot-card__art" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><use href="images/mascots.svg#mascot-bear" /></svg>
+            </div>
+            <p class="mascot-card__role">Localization lead</p>
+            <h3 class="mascot-card__name">Sage the Barn Owl</h3>
+            <p class="mascot-card__personality">Speaks eleven languages and a couple of bird calls.</p>
+          </article>
+
+          <article class="mascot-card reveal reveal--delay-4" style="--cute: #6BE3B7;">
+            <div class="mascot-card__art" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><use href="images/mascots.svg#mascot-rabbit" /></svg>
+            </div>
+            <p class="mascot-card__role">QA in chief</p>
+            <h3 class="mascot-card__name">Biscuit the Otter</h3>
+            <p class="mascot-card__personality">Will find the one bug you missed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <section class="section section--alt" aria-labelledby="numbers">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">By the numbers</span>
+          <h2 id="numbers" class="section__title">Quietly proud of these.</h2>
+          <p class="section__lead">
+            We don't chase vanity metrics. The numbers below are the ones we use to make
+            decisions: how many real people installed our software, how long we kept them,
+            and how often we shipped. <span class="emoji">📈</span>
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <p class="stat__value" data-target="12" data-suffix="+">0</p>
+            <p class="stat__label">Apps shipped on Google Play &amp; the App Store</p>
+          </div>
+          <div class="stat reveal reveal--delay-1">
+            <p class="stat__value" data-target="4000000" data-suffix="+">0</p>
+            <p class="stat__label">Lifetime downloads across all titles</p>
+          </div>
+          <div class="stat reveal reveal--delay-2">
+            <p class="stat__value" data-target="27" data-suffix="">0</p>
+            <p class="stat__label">Countries with active monthly users</p>
+          </div>
+          <div class="stat reveal reveal--delay-3">
+            <p class="stat__value" data-target="11" data-suffix="">0</p>
+            <p class="stat__label">Languages supported in every release</p>
+          </div>
+        </div>
+
+        <p class="reveal" style="margin-top: var(--space-7); text-align: center; color: var(--text-secondary);">
+          Trusted by teams and players across 27 countries, with reviews averaging <strong>4.6 ★</strong> on both stores. <span class="emoji">⭐</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA / NEWSLETTER -->
+    <section class="section" aria-labelledby="stay-in-touch">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-card__grid">
+            <div>
+              <span class="hero__eyebrow" style="background: rgba(255,255,255,0.08); color: var(--color-accent-300); border-color: rgba(255,255,255,0.18);">Stay in touch</span>
+              <h2 id="stay-in-touch" class="cta-card__title">Follow the studio — quietly.</h2>
+              <p class="cta-card__lead">
+                One email per month with release notes, a behind-the-scenes look at what we're
+                building, and the occasional wallpaper. No tracking pixels, no marketing
+                automation, no "last chance" subject lines. <span class="emoji">💌</span>
+              </p>
+              <form id="newsletter-form" class="cta-card__form" novalidate>
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input id="newsletter-email" name="email" type="email" required placeholder="you@somewhere.com" autocomplete="email" />
+                <button type="submit">Subscribe</button>
+              </form>
+              <small class="cta-card__helper">We use this address only for the newsletter. Unsubscribe with one click in any email.</small>
+              <span class="cta-card__status" role="status" style="display:none; margin-top: 0.6rem; color: var(--color-cute-mint); font-size: var(--fs-xs);"></span>
+            </div>
+            <div class="cta-card__art" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <use href="images/mascots.svg#mascot-fox" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="footer__brand" href="/">
+            <span class="site-header__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 11 L11 4 L21 4 L27 11 L27 21 L21 28 L11 28 L5 21 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="rgba(255,255,255,0.08)"/>
+                <path d="M11 12 L11 22 M11 17 L17 17 M21 12 L21 22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </span>
+            N VoaWu
+          </a>
+          <p class="footer__tagline">Independent app &amp; mobile-management studio. Crafted in Europe. Played everywhere.</p>
+          <address class="footer__contact">
+            N VoaWu Studio<br />
+            Email: <a href="mailto:elefnarin@gmail.com">elefnarin@gmail.com</a><br />
+            Hours: Monday – Friday, 09:00 – 18:00 CET<br />
+            Location: Europe (remote-first)
+          </address>
+          <div class="footer__socials">
+            <a class="footer__social" href="https://twitter.com/nvoawu" target="_blank" rel="noopener noreferrer" aria-label="N VoaWu on Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+            </a>
+            <a class="footer__social" href="https://www.linkedin.com/company/nvoawu" target="_blank" rel="noopener noreferrer" aria-label="N VoaWu on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a class="footer__social" href="https://github.com/elefnarin-ship-it" target="_blank" rel="noopener noreferrer" aria-label="N VoaWu on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.77-1.62-2.67-.3-5.47-1.34-5.47-5.95 0-1.32.47-2.4 1.24-3.25-.13-.31-.54-1.54.11-3.2 0 0 1.01-.32 3.31 1.24a11.5 11.5 0 0 1 6.02 0c2.3-1.56 3.31-1.24 3.31-1.24.65 1.66.24 2.89.12 3.2.77.85 1.23 1.93 1.23 3.25 0 4.62-2.8 5.64-5.47 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 .3z"/></svg>
+            </a>
+            <a class="footer__social" href="https://www.youtube.com/@nvoawu" target="_blank" rel="noopener noreferrer" aria-label="N VoaWu on YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            </a>
+            <a class="footer__social" href="https://discord.gg/nvoawu" target="_blank" rel="noopener noreferrer" aria-label="N VoaWu on Discord">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.32 4.37a19.7 19.7 0 0 0-4.93-1.52.07.07 0 0 0-.08.04 13.7 13.7 0 0 0-.6 1.24 18.27 18.27 0 0 0-5.42 0 12.7 12.7 0 0 0-.61-1.24.07.07 0 0 0-.08-.04 19.7 19.7 0 0 0-4.93 1.52.07.07 0 0 0-.03.03A20.27 20.27 0 0 0 .27 17.86a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 6 3.04.08.08 0 0 0 .08-.03 14.2 14.2 0 0 0 1.23-2 .08.08 0 0 0-.04-.1 13.1 13.1 0 0 1-1.87-.9.08.08 0 0 1 0-.13c.13-.1.25-.2.37-.3a.08.08 0 0 1 .08-.01 14.18 14.18 0 0 0 12.06 0 .08.08 0 0 1 .08.01c.12.1.24.2.37.3a.08.08 0 0 1 0 .13 12.4 12.4 0 0 1-1.87.9.08.08 0 0 0-.04.1 16.13 16.13 0 0 0 1.23 2 .08.08 0 0 0 .08.03 19.85 19.85 0 0 0 6-3.04.08.08 0 0 0 .03-.06 20.04 20.04 0 0 0-3.66-13.46.06.06 0 0 0-.03-.03zM8.02 15.34c-1.18 0-2.16-1.08-2.16-2.4 0-1.33.96-2.4 2.16-2.4 1.21 0 2.18 1.09 2.16 2.4 0 1.32-.96 2.4-2.16 2.4zm7.97 0c-1.18 0-2.16-1.08-2.16-2.4 0-1.33.96-2.4 2.16-2.4 1.21 0 2.18 1.09 2.16 2.4 0 1.32-.95 2.4-2.16 2.4z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3>Studio</h3>
+          <ul class="footer__list">
+            <li><a href="/">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="/#our-apps">Apps</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Apps</h3>
+          <ul class="footer__list">
+            <li><a href="https://play.google.com/store/apps/dev?id=0000000000000000000" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+            <li><a href="https://apps.apple.com/developer/n-voawu-studio/id000000000" target="_blank" rel="noopener noreferrer">App Store</a></li>
+            <li><a href="/#our-apps">Catalog</a></li>
+            <li><a href="contact.html#demo">Management demo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Legal</h3>
+          <ul class="footer__list">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="#" data-cookie-open>Cookie settings</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+            <li><a href="press.html" rel="nofollow">Press kit</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div>
+          © 2026 N VoaWu Studio. All rights reserved. All trademarks and app store logos are property of their respective owners.
+        </div>
+        <div class="footer__status">
+          Studio online <span class="dot" aria-hidden="true"></span>
+        </div>
+      </div>
+      <p style="font-size: var(--fs-xs); color: var(--color-steel-400); margin-top: var(--space-3); line-height: var(--lh-loose);">
+        Google Play and the Google Play logo are trademarks of Google LLC. Apple, the Apple logo, App Store, and iPhone are trademarks of Apple Inc., registered in the US and other countries. N VoaWu is not affiliated with Apple Inc. or Google LLC.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Cookie banner -->
+  <aside class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <button class="cookie-banner__close" type="button" data-cookie-close aria-label="Close cookie banner">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="images/icons.svg#icon-close" /></svg>
+    </button>
+    <h3>🍪 A note on cookies</h3>
+    <p>We use a couple of strictly necessary cookies to keep this site working, and an optional cookie to remember your theme. No marketing, no third-party trackers. You can change your mind any time.</p>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--accent" type="button" data-cookie-accept>Accept all</button>
+      <button class="btn btn--ghost" type="button" data-cookie-decline style="--btn-bg: transparent; --btn-fg: #fff; --btn-bd: rgba(255,255,255,0.4);">Only essential</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/counters.js" defer></script>
+  <script src="js/mascots.js" defer></script>
+</body>
+</html>

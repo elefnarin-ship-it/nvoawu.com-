@@ -1,0 +1,9 @@
+# robots.txt — https://nvoawu.com/
+User-agent: *
+Allow: /
+
+# Disallow the empty placeholder pages
+Disallow: /press.html
+
+# Sitemap
+Sitemap: https://nvoawu.com/sitemap.xml

@@ -1,0 +1,221 @@
+/* =========================================================================
+   N VoaWu — Design Tokens
+   -----------------------------------------------------------------------
+   Inspired by premium automotive brand sites (BMW-class): deep neutrals,
+   a confident accent, and a softer "cute" secondary palette used in the
+   mascot / illustration sections.
+   ========================================================================= */
+
+:root {
+  /* ---------- Brand color (premium automotive neutrals) ----------
+     Deep ink as the "black plate", charcoal as the body, silver as the
+     highlight.  Accent is an electric cobalt — confident and tech-forward
+     without being neon.  */
+  --color-ink-900:        #0A0D14;   /* near-black, hero/footer */
+  --color-ink-800:        #11151F;
+  --color-ink-700:        #1A1F2C;
+  --color-charcoal-600:   #2A2F3D;   /* primary body text on light */
+  --color-graphite-500:   #4A5063;
+  --color-steel-400:      #6E7488;
+  --color-silver-300:     #A6ADBE;   /* tertiary text, dividers on dark */
+  --color-mist-200:       #D6DAE3;
+  --color-mist-100:       #ECEFF5;   /* surface tint */
+  --color-paper-50:       #F6F7FB;   /* page background */
+  --color-pure:           #FFFFFF;
+
+  /* Accent — electric cobalt with a warmer azure for hovers */
+  --color-accent-700:     #1F3FE0;
+  --color-accent-600:     #2A52FF;   /* primary accent */
+  --color-accent-500:     #4A72FF;
+  --color-accent-300:     #93AEFF;
+  --color-accent-100:     #DCE5FF;
+  --color-accent-glow:    rgba(42, 82, 255, 0.45);
+
+  /* ---------- "Cute" secondary palette (mascot sections) ----------
+     Warm, friendly, slightly desaturated so they don't fight the brand.  */
+  --color-cute-coral:     #FF8A6B;
+  --color-cute-peach:     #FFC2A1;
+  --color-cute-mint:      #6BE3B7;
+  --color-cute-sky:       #7EC8FF;
+  --color-cute-lilac:     #C5A8FF;
+  --color-cute-butter:    #FFD86B;
+  --color-cute-rose:      #FFB3D1;
+
+  /* Status / feedback */
+  --color-success:        #2BB673;
+  --color-warning:        #F5A524;
+  --color-danger:         #E5484D;
+
+  /* Semantic surfaces */
+  --bg-page:              var(--color-paper-50);
+  --bg-surface:           var(--color-pure);
+  --bg-surface-raised:    var(--color-pure);
+  --bg-inverse:           var(--color-ink-900);
+  --bg-mist:              var(--color-mist-100);
+  --text-primary:         var(--color-ink-800);
+  --text-secondary:       var(--color-graphite-500);
+  --text-muted:           var(--color-steel-400);
+  --text-inverse:         var(--color-pure);
+  --text-on-accent:       var(--color-pure);
+  --border-subtle:        rgba(17, 21, 31, 0.08);
+  --border-strong:        rgba(17, 21, 31, 0.18);
+  --border-inverse:       rgba(255, 255, 255, 0.14);
+
+  /* ---------- Spacing scale (4-pt base) ----------
+     Larger upper values for hero / section rhythm.  */
+  --space-0:   0;
+  --space-1:   0.25rem;   /*  4 */
+  --space-2:   0.5rem;    /*  8 */
+  --space-3:   0.75rem;   /* 12 */
+  --space-4:   1rem;      /* 16 */
+  --space-5:   1.5rem;    /* 24 */
+  --space-6:   2rem;      /* 32 */
+  --space-7:   2.5rem;    /* 40 */
+  --space-8:   3rem;      /* 48 */
+  --space-9:   4rem;      /* 64 */
+  --space-10:  5rem;      /* 80 */
+  --space-11:  6rem;      /* 96 */
+  --space-12:  8rem;      /* 128 */
+  --space-13:  10rem;     /* 160 */
+  --space-14:  12rem;     /* 192 */
+
+  /* Section / container width */
+  --container-max:  1280px;
+  --container-pad:  clamp(1rem, 4vw, 2.5rem);
+  --section-pad-y:  clamp(4rem, 9vw, 8rem);
+
+  /* ---------- Type scale ----------
+     System font stack as fallback (no external font download required).
+     Google Fonts recommendations (load via <link> if online):
+       - Headings: "Space Grotesk" (geometric, modern, automotive-friendly)
+       - Body:     "Inter"           (UI-grade readability)
+     Hand-rolled fluid clamp() so scale adapts smoothly between mobile & desktop.  */
+  --font-sans: "Inter", "Space Grotesk", "Segoe UI", system-ui, -apple-system,
+               BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Space Grotesk", "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+               Consolas, "Liberation Mono", monospace;
+
+  /* Fluid scale (clamp(min, fluid, max)) */
+  --fs-xs:   clamp(0.72rem, 0.68rem + 0.18vw, 0.8rem);
+  --fs-sm:   clamp(0.82rem, 0.78rem + 0.2vw, 0.9rem);
+  --fs-base: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  --fs-md:   clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
+  --fs-lg:   clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --fs-xl:   clamp(1.45rem, 1.3rem + 0.8vw, 1.85rem);
+  --fs-2xl:  clamp(1.85rem, 1.6rem + 1.2vw, 2.4rem);
+  --fs-3xl:  clamp(2.3rem, 1.9rem + 1.8vw, 3.2rem);
+  --fs-4xl:  clamp(2.9rem, 2.3rem + 2.6vw, 4.2rem);
+  --fs-5xl:  clamp(3.6rem, 2.8rem + 3.6vw, 5.4rem);
+
+  --lh-tight:   1.08;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-loose:   1.7;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.16em;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* ---------- Radii ---------- */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows ----------
+     Layered shadows for premium depth.  */
+  --shadow-xs: 0 1px 2px rgba(10, 13, 20, 0.06);
+  --shadow-sm: 0 2px 6px rgba(10, 13, 20, 0.08),
+               0 1px 2px rgba(10, 13, 20, 0.04);
+  --shadow-md: 0 8px 24px rgba(10, 13, 20, 0.10),
+               0 2px 6px rgba(10, 13, 20, 0.06);
+  --shadow-lg: 0 24px 48px -12px rgba(10, 13, 20, 0.18),
+               0 8px 16px rgba(10, 13, 20, 0.08);
+  --shadow-xl: 0 40px 80px -20px rgba(10, 13, 20, 0.28),
+               0 12px 24px rgba(10, 13, 20, 0.10);
+  --shadow-glow: 0 0 0 1px var(--color-accent-glow),
+                 0 12px 40px -8px var(--color-accent-glow);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  /* Glassmorphism */
+  --glass-bg:    rgba(255, 255, 255, 0.72);
+  --glass-bg-dark: rgba(10, 13, 20, 0.55);
+  --glass-blur:  18px;
+  --glass-blur-strong: 28px;
+
+  /* ---------- Easing ----------
+     Smooth, premium, slightly expressive.  */
+  --ease-standard:   cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce:     cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  /* ---------- Motion durations ---------- */
+  --dur-instant:  80ms;
+  --dur-fast:     180ms;
+  --dur-base:     280ms;
+  --dur-slow:     480ms;
+  --dur-slower:   720ms;
+  --dur-cinematic:1200ms;
+
+  /* ---------- z-index scale ---------- */
+  --z-base:       1;
+  --z-raised:     10;
+  --z-sticky:     100;
+  --z-overlay:    500;
+  --z-dropdown:   800;
+  --z-header:     900;
+  --z-modal:      1000;
+  --z-toast:      1100;
+  --z-tooltip:    1200;
+  --z-skip:       9999;
+
+  /* ---------- Gradients (tasteful) ---------- */
+  --gradient-mesh-cool:
+      radial-gradient(at 12% 18%, rgba(42, 82, 255, 0.35) 0px, transparent 45%),
+      radial-gradient(at 88% 22%, rgba(123, 200, 255, 0.30) 0px, transparent 50%),
+      radial-gradient(at 78% 84%, rgba(197, 168, 255, 0.32) 0px, transparent 55%),
+      radial-gradient(at 22% 82%, rgba(255, 138, 107, 0.20) 0px, transparent 55%),
+      linear-gradient(135deg, #0A0D14 0%, #11151F 60%, #1A1F2C 100%);
+
+  --gradient-accent-rail:
+      linear-gradient(90deg, var(--color-accent-700) 0%,
+                              var(--color-accent-600) 60%,
+                              var(--color-accent-500) 100%);
+
+  --gradient-text-cool:
+      linear-gradient(135deg, #FFFFFF 0%, #C9D6FF 60%, #93AEFF 100%);
+
+  --gradient-text-warm:
+      linear-gradient(135deg, #FF8A6B 0%, #FFC2A1 50%, #FFD86B 100%);
+
+  /* ---------- Layout / misc ---------- */
+  --header-h:        72px;
+  --maxw-prose:      68ch;
+  --focus-ring:      0 0 0 3px var(--color-accent-300);
+  --transition-base: all var(--dur-base) var(--ease-standard);
+}
+
+/* Honor reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant:  0ms;
+    --dur-fast:     0ms;
+    --dur-base:     0ms;
+    --dur-slow:     0ms;
+    --dur-slower:   0ms;
+    --dur-cinematic:0ms;
+  }
+}

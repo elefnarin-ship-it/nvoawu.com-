@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  N VoaWu — hero illustration (1600x900)
+  Layered: gradient mesh → orbit grid → glow spots → floating shapes →
+  device mockups (phone + laptop) → mascot peeking from a corner.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1600 900"
+     role="img"
+     aria-label="N VoaWu hero illustration">
+
+  <defs>
+    <!-- Mesh background -->
+    <linearGradient id="bg-base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#0A0D14"/>
+      <stop offset="0.55" stop-color="#11151F"/>
+      <stop offset="1"   stop-color="#1A1F2C"/>
+    </linearGradient>
+    <radialGradient id="mesh-a" cx="0.18" cy="0.22" r="0.55">
+      <stop offset="0"   stop-color="#2A52FF" stop-opacity="0.55"/>
+      <stop offset="1"   stop-color="#2A52FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mesh-b" cx="0.82" cy="0.18" r="0.5">
+      <stop offset="0"   stop-color="#7EC8FF" stop-opacity="0.45"/>
+      <stop offset="1"   stop-color="#7EC8FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mesh-c" cx="0.78" cy="0.82" r="0.55">
+      <stop offset="0"   stop-color="#C5A8FF" stop-opacity="0.4"/>
+      <stop offset="1"   stop-color="#C5A8FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mesh-d" cx="0.2" cy="0.85" r="0.5">
+      <stop offset="0"   stop-color="#FF8A6B" stop-opacity="0.3"/>
+      <stop offset="1"   stop-color="#FF8A6B" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glow spot -->
+    <radialGradient id="glow-soft" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#93AEFF" stop-opacity="0.5"/>
+      <stop offset="1"   stop-color="#93AEFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Phone screen -->
+    <linearGradient id="phone-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A52FF"/>
+      <stop offset="1" stop-color="#7EC8FF"/>
+    </linearGradient>
+
+    <!-- Laptop screen -->
+    <linearGradient id="laptop-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11151F"/>
+      <stop offset="1" stop-color="#1A1F2C"/>
+    </linearGradient>
+    <linearGradient id="laptop-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2A52FF"/>
+      <stop offset="1" stop-color="#C5A8FF"/>
+    </linearGradient>
+
+    <!-- World grid clip -->
+    <pattern id="grid-fine" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0 H0 V48" fill="none" stroke="#2A52FF" stroke-width="0.6" opacity="0.18"/>
+    </pattern>
+
+    <!-- Subtle noise via repeated tiny dots -->
+    <pattern id="dots-fine" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.5" fill="#FFFFFF" opacity="0.05"/>
+    </pattern>
+
+    <!-- Mascot (mini fox) -->
+    <symbol id="hero-fox" viewBox="0 0 200 200">
+      <g>
+        <polygon points="52,42 70,28 78,72" fill="#FF8A6B"/>
+        <polygon points="148,42 130,28 122,72" fill="#FF8A6B"/>
+        <polygon points="58,46 70,34 75,66" fill="#FFC2A1"/>
+        <polygon points="142,46 130,34 125,66" fill="#FFC2A1"/>
+        <path d="M40 90 Q40 30 100 30 Q160 30 160 90 Q160 150 100 165 Q40 150 40 90 Z" fill="#FF8A6B"/>
+        <path d="M64 116 Q100 156 136 116 Q132 144 100 158 Q68 144 64 116 Z" fill="#FFF7F2"/>
+        <circle cx="78" cy="92" r="8" fill="#1A1F2C"/>
+        <circle cx="122" cy="92" r="8" fill="#1A1F2C"/>
+        <circle cx="80" cy="89" r="2.4" fill="#FFFFFF"/>
+        <circle cx="124" cy="89" r="2.4" fill="#FFFFFF"/>
+        <circle cx="70" cy="116" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <circle cx="130" cy="116" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <ellipse cx="100" cy="118" rx="5" ry="3.5" fill="#1A1F2C"/>
+        <path d="M88 130 Q100 142 112 130" fill="none" stroke="#1A1F2C" stroke-width="2.6" stroke-linecap="round"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <!-- ===== Background plate ===== -->
+  <rect width="1600" height="900" fill="url(#bg-base)"/>
+  <rect width="1600" height="900" fill="url(#mesh-a)"/>
+  <rect width="1600" height="900" fill="url(#mesh-b)"/>
+  <rect width="1600" height="900" fill="url(#mesh-c)"/>
+  <rect width="1600" height="900" fill="url(#mesh-d)"/>
+  <rect width="1600" height="900" fill="url(#dots-fine)"/>
+
+  <!-- ===== World / network grid motif (rotated) ===== -->
+  <g transform="translate(800 460) rotate(-12) translate(-800 -460)" opacity="0.7">
+    <g stroke="#7EC8FF" stroke-width="1" fill="none" opacity="0.32">
+      <ellipse cx="800" cy="460" rx="640" ry="320"/>
+      <ellipse cx="800" cy="460" rx="640" ry="220" transform="rotate(28 800 460)"/>
+      <ellipse cx="800" cy="460" rx="640" ry="220" transform="rotate(-28 800 460)"/>
+      <ellipse cx="800" cy="460" rx="640" ry="160" transform="rotate(60 800 460)"/>
+      <ellipse cx="800" cy="460" rx="640" ry="160" transform="rotate(-60 800 460)"/>
+    </g>
+    <!-- Equator + meridian lines -->
+    <g stroke="#7EC8FF" stroke-width="1.2" opacity="0.5">
+      <line x1="120" y1="460" x2="1480" y2="460"/>
+      <line x1="800" y1="120" x2="800" y2="800"/>
+    </g>
+    <!-- Network nodes -->
+    <g fill="#7EC8FF">
+      <circle cx="500" cy="320" r="3"/>
+      <circle cx="700" cy="240" r="2.4"/>
+      <circle cx="900" cy="320" r="3"/>
+      <circle cx="1100" cy="260" r="2.4"/>
+      <circle cx="1300" cy="380" r="3"/>
+      <circle cx="380" cy="500" r="2.4"/>
+      <circle cx="600" cy="560" r="3"/>
+      <circle cx="820" cy="640" r="2.4"/>
+      <circle cx="1080" cy="540" r="3"/>
+      <circle cx="1260" cy="600" r="2.4"/>
+      <circle cx="540" cy="700" r="2.4"/>
+      <circle cx="980" cy="720" r="3"/>
+    </g>
+    <!-- Connecting lines -->
+    <g stroke="#7EC8FF" stroke-width="1" opacity="0.55">
+      <line x1="500" y1="320" x2="700" y2="240"/>
+      <line x1="700" y1="240" x2="900" y2="320"/>
+      <line x1="900" y1="320" x2="1100" y2="260"/>
+      <line x1="1100" y1="260" x2="1300" y2="380"/>
+      <line x1="380" y1="500" x2="600" y2="560"/>
+      <line x1="600" y1="560" x2="820" y2="640"/>
+      <line x1="820" y1="640" x2="1080" y2="540"/>
+      <line x1="1080" y1="540" x2="1260" y2="600"/>
+      <line x1="540" y1="700" x2="980" y2="720"/>
+    </g>
+  </g>
+
+  <!-- ===== Floating geometric shapes ===== -->
+  <g opacity="0.85">
+    <!-- Big soft ring -->
+    <circle cx="320" cy="220" r="120" fill="none"
+            stroke="#93AEFF" stroke-width="2" opacity="0.55"/>
+    <circle cx="320" cy="220" r="74"  fill="none"
+            stroke="#93AEFF" stroke-width="1.4" opacity="0.4"
+            stroke-dasharray="4 6"/>
+    <!-- Triangle -->
+    <polygon points="1280,140 1340,260 1220,260"
+             fill="none" stroke="#7EC8FF" stroke-width="2" opacity="0.7"/>
+    <!-- Hexagon outline -->
+    <polygon points="180,720 230,694 280,720 280,772 230,798 180,772"
+             fill="none" stroke="#C5A8FF" stroke-width="2" opacity="0.7"/>
+    <!-- Small filled accents -->
+    <circle cx="1200" cy="700" r="6" fill="#FF8A6B"/>
+    <circle cx="1380" cy="180" r="4" fill="#FFD86B"/>
+    <circle cx="160"  cy="430" r="5" fill="#6BE3B7"/>
+    <rect x="1430" y="780" width="14" height="14" rx="3" fill="#7EC8FF" opacity="0.7"
+          transform="rotate(20 1437 787)"/>
+  </g>
+
+  <!-- ===== Glow spots ===== -->
+  <circle cx="220" cy="780" r="180" fill="url(#glow-soft)" opacity="0.35"/>
+  <circle cx="1380" cy="160" r="160" fill="url(#glow-soft)" opacity="0.25"/>
+  <circle cx="1180" cy="780" r="120" fill="url(#glow-soft)" opacity="0.2"/>
+
+  <!-- ===== Orbit lines around a focal point ===== -->
+  <g transform="translate(1100 480)">
+    <ellipse rx="220" ry="80" fill="none" stroke="#7EC8FF" stroke-width="1.4"
+             opacity="0.45" transform="rotate(-18)"/>
+    <ellipse rx="180" ry="60" fill="none" stroke="#C5A8FF" stroke-width="1.2"
+             opacity="0.4"  transform="rotate(22)"/>
+    <circle r="10" fill="#7EC8FF"/>
+    <circle r="10" fill="#C5A8FF" cx="160" cy="0" transform="rotate(22) translate(0 0)" opacity="0"/>
+    <!-- Satellite -->
+    <circle cx="180" cy="14" r="6" fill="#FFD86B"/>
+    <circle cx="-140" cy="-26" r="4" fill="#FF8A6B"/>
+  </g>
+
+  <!-- ===== Laptop mockup (right-of-center) ===== -->
+  <g transform="translate(820 480)">
+    <!-- Lid -->
+    <rect x="0" y="0" width="520" height="320" rx="18" fill="#1A1F2C" stroke="#2A2F3D" stroke-width="2"/>
+    <rect x="14" y="14" width="492" height="292" rx="10" fill="url(#laptop-screen)"/>
+    <!-- Top bar -->
+    <rect x="14" y="14" width="492" height="32" fill="#0A0D14" opacity="0.5"/>
+    <circle cx="32" cy="30" r="5" fill="#FF8A6B"/>
+    <circle cx="50" cy="30" r="5" fill="#FFD86B"/>
+    <circle cx="68" cy="30" r="5" fill="#6BE3B7"/>
+    <!-- Card row -->
+    <g transform="translate(34 64)">
+      <rect width="140" height="100" rx="10" fill="url(#laptop-card)" opacity="0.9"/>
+      <rect x="20" y="20" width="80" height="6" rx="3" fill="#FFFFFF" opacity="0.9"/>
+      <rect x="20" y="34" width="60" height="4" rx="2" fill="#FFFFFF" opacity="0.6"/>
+      <rect x="20" y="78" width="40" height="14" rx="7" fill="#FFFFFF" opacity="0.85"/>
+
+      <rect x="156" width="140" height="100" rx="10" fill="#FFFFFF" opacity="0.08"/>
+      <rect x="176" y="20" width="80" height="6" rx="3" fill="#FFFFFF" opacity="0.8"/>
+      <rect x="176" y="34" width="60" height="4" rx="2" fill="#FFFFFF" opacity="0.5"/>
+      <rect x="176" y="78" width="40" height="14" rx="7" fill="#7EC8FF"/>
+
+      <rect x="312" width="140" height="100" rx="10" fill="#FFFFFF" opacity="0.08"/>
+      <rect x="332" y="20" width="80" height="6" rx="3" fill="#FFFFFF" opacity="0.8"/>
+      <rect x="332" y="34" width="60" height="4" rx="2" fill="#FFFFFF" opacity="0.5"/>
+      <rect x="332" y="78" width="40" height="14" rx="7" fill="#C5A8FF"/>
+    </g>
+    <!-- Big chart panel -->
+    <g transform="translate(34 180)">
+      <rect width="452" height="116" rx="10" fill="#FFFFFF" opacity="0.06"/>
+      <polyline points="20,90 80,70 140,80 200,50 260,60 320,30 380,40 432,18"
+                fill="none" stroke="#7EC8FF" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round"/>
+      <polyline points="20,100 80,86 140,92 200,72 260,80 320,54 380,64 432,42"
+                fill="none" stroke="#C5A8FF" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" opacity="0.7"/>
+    </g>
+    <!-- Base -->
+    <rect x="-30" y="320" width="580" height="14" rx="6" fill="#2A2F3D"/>
+    <rect x="240" y="320" width="40" height="6" rx="3" fill="#1A1F2C"/>
+  </g>
+
+  <!-- ===== Phone mockup (overlapping laptop) ===== -->
+  <g transform="translate(620 360) rotate(-8)">
+    <rect x="0" y="0" width="170" height="340" rx="26" fill="#0A0D14" stroke="#2A2F3D" stroke-width="2"/>
+    <rect x="8" y="8" width="154" height="324" rx="20" fill="url(#phone-screen)"/>
+    <!-- Status -->
+    <rect x="60" y="14" width="50" height="14" rx="7" fill="#0A0D14" opacity="0.6"/>
+    <!-- App cards -->
+    <g transform="translate(20 50)">
+      <rect width="130" height="80" rx="12" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="22" cy="40" r="14" fill="#FFFFFF" opacity="0.85"/>
+      <rect x="46" y="28" width="68" height="6" rx="3" fill="#FFFFFF" opacity="0.9"/>
+      <rect x="46" y="42" width="50" height="4" rx="2" fill="#FFFFFF" opacity="0.6"/>
+    </g>
+    <g transform="translate(20 144)">
+      <rect width="130" height="80" rx="12" fill="#FFFFFF" opacity="0.12"/>
+      <rect x="14" y="16" width="102" height="8" rx="4" fill="#FFFFFF" opacity="0.85"/>
+      <rect x="14" y="32" width="80"  height="4" rx="2" fill="#FFFFFF" opacity="0.55"/>
+      <rect x="14" y="44" width="60"  height="4" rx="2" fill="#FFFFFF" opacity="0.4"/>
+      <rect x="14" y="60" width="40"  height="10" rx="5" fill="#FFD86B"/>
+    </g>
+    <g transform="translate(20 238)">
+      <rect width="130" height="60" rx="12" fill="#FFFFFF" opacity="0.12"/>
+      <rect x="14" y="18" width="80"  height="6" rx="3" fill="#FFFFFF" opacity="0.85"/>
+      <rect x="14" y="32" width="60"  height="4" rx="2" fill="#FFFFFF" opacity="0.55"/>
+    </g>
+    <!-- Notch -->
+    <rect x="64" y="6" width="42" height="10" rx="5" fill="#0A0D14"/>
+  </g>
+
+  <!-- ===== Mascot peeking from the bottom-left corner ===== -->
+  <g transform="translate(60 720)">
+    <!-- Soft bubble backing -->
+    <ellipse cx="100" cy="100" rx="120" ry="40" fill="#0A0D14" opacity="0.35"/>
+    <use href="#hero-fox" x="0" y="0" width="200" height="200"/>
+  </g>
+
+  <!-- ===== Sparkles ===== -->
+  <g fill="#FFD86B">
+    <path d="M1180 200 L1186 212 L1198 218 L1186 224 L1180 236 L1174 224 L1162 218 L1174 212 Z"/>
+    <path d="M380 600 L384 608 L392 612 L384 616 L380 624 L376 616 L368 612 L376 608 Z" opacity="0.8"/>
+    <path d="M1380 540 L1384 548 L1392 552 L1384 556 L1380 564 L1376 556 L1368 552 L1376 548 Z" opacity="0.7"/>
+  </g>
+</svg>

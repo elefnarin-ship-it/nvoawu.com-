@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- "Global reach" — stylized globe with multiple mascots from different regions. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img"
+     aria-label="Global reach">
+  <defs>
+    <linearGradient id="gl-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0D14"/>
+      <stop offset="1" stop-color="#11151F"/>
+    </linearGradient>
+    <radialGradient id="gl-ambient" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#2A52FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2A52FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gl-globe" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#4A72FF"/>
+      <stop offset="0.6" stop-color="#2A52FF"/>
+      <stop offset="1" stop-color="#0A0D14"/>
+    </radialGradient>
+    <linearGradient id="gl-continent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7EC8FF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#6BE3B7" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="gl-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A52FF"/>
+      <stop offset="1" stop-color="#7EC8FF"/>
+    </linearGradient>
+
+    <!-- Mascot (fox) -->
+    <symbol id="gl-fox" viewBox="0 0 200 200">
+      <polygon points="52,42 70,28 78,72" fill="#FF8A6B"/>
+      <polygon points="148,42 130,28 122,72" fill="#FF8A6B"/>
+      <polygon points="58,46 70,34 75,66" fill="#FFC2A1"/>
+      <polygon points="142,46 130,34 125,66" fill="#FFC2A1"/>
+      <path d="M40 90 Q40 30 100 30 Q160 30 160 90 Q160 150 100 165 Q40 150 40 90 Z" fill="#FF8A6B"/>
+      <path d="M64 116 Q100 156 136 116 Q132 144 100 158 Q68 144 64 116 Z" fill="#FFF7F2"/>
+      <circle cx="78" cy="92" r="8" fill="#1A1F2C"/>
+      <circle cx="122" cy="92" r="8" fill="#1A1F2C"/>
+      <circle cx="80" cy="89" r="2.4" fill="#FFFFFF"/>
+      <circle cx="124" cy="89" r="2.4" fill="#FFFFFF"/>
+      <ellipse cx="100" cy="118" rx="5" ry="3.5" fill="#1A1F2C"/>
+      <path d="M88 130 Q100 142 112 130" fill="none" stroke="#1A1F2C" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <!-- Mascot (panda) -->
+    <symbol id="gl-panda" viewBox="0 0 200 200">
+      <circle cx="60" cy="60" r="20" fill="#1A1F2C"/>
+      <circle cx="140" cy="60" r="20" fill="#1A1F2C"/>
+      <circle cx="100" cy="105" r="65" fill="#F6F7FB"/>
+      <ellipse cx="76" cy="100" rx="18" ry="22" fill="#1A1F2C" transform="rotate(-15 76 100)"/>
+      <ellipse cx="124" cy="100" rx="18" ry="22" fill="#1A1F2C" transform="rotate(15 124 100)"/>
+      <circle cx="78" cy="103" r="6" fill="#F6F7FB"/>
+      <circle cx="122" cy="103" r="6" fill="#F6F7FB"/>
+      <circle cx="79" cy="104" r="3" fill="#1A1F2C"/>
+      <circle cx="123" cy="104" r="3" fill="#1A1F2C"/>
+      <ellipse cx="100" cy="124" rx="5" ry="3.5" fill="#1A1F2C"/>
+      <path d="M90 134 Q100 142 110 134" fill="none" stroke="#1A1F2C" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <!-- Mascot (cat) -->
+    <symbol id="gl-cat" viewBox="0 0 200 200">
+      <polygon points="55,80 65,28 100,68" fill="#7EC8FF"/>
+      <polygon points="145,80 135,28 100,68" fill="#7EC8FF"/>
+      <path d="M44 100 Q44 40 100 40 Q156 40 156 100 Q156 158 100 170 Q44 158 44 100 Z" fill="#7EC8FF"/>
+      <path d="M64 116 Q100 158 136 116 Q132 144 100 156 Q68 144 64 116 Z" fill="#F0F7FF"/>
+      <ellipse cx="80" cy="98" rx="6" ry="9" fill="#1A1F2C"/>
+      <ellipse cx="120" cy="98" rx="6" ry="9" fill="#1A1F2C"/>
+      <path d="M96 118 L104 118 L100 124 Z" fill="#FF8A6B"/>
+      <path d="M100 124 Q92 134 88 132" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M100 124 Q108 134 112 132" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <!-- Mascot (rabbit) -->
+    <symbol id="gl-rabbit" viewBox="0 0 200 200">
+      <ellipse cx="76" cy="44" rx="14" ry="36" fill="#F6F7FB"/>
+      <ellipse cx="124" cy="44" rx="14" ry="36" fill="#F6F7FB"/>
+      <ellipse cx="76" cy="48" rx="7" ry="24" fill="#FFB3D1"/>
+      <ellipse cx="124" cy="48" rx="7" ry="24" fill="#FFB3D1"/>
+      <circle cx="100" cy="118" r="58" fill="#F6F7FB"/>
+      <ellipse cx="82" cy="112" rx="5" ry="7" fill="#1A1F2C"/>
+      <ellipse cx="118" cy="112" rx="5" ry="7" fill="#1A1F2C"/>
+      <path d="M96 130 L104 130 L100 136 Z" fill="#FF8A6B"/>
+    </symbol>
+  </defs>
+
+  <rect width="800" height="600" rx="32" fill="url(#gl-bg)"/>
+  <rect width="800" height="600" rx="32" fill="url(#gl-ambient)"/>
+
+  <!-- Dotted stars -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <circle cx="80"  cy="60"  r="1.2"/>
+    <circle cx="160" cy="40"  r="0.8"/>
+    <circle cx="240" cy="80"  r="1.2"/>
+    <circle cx="640" cy="50"  r="0.8"/>
+    <circle cx="720" cy="100" r="1.2"/>
+    <circle cx="560" cy="80"  r="1"/>
+    <circle cx="80"  cy="540" r="1"/>
+    <circle cx="180" cy="560" r="0.8"/>
+    <circle cx="700" cy="540" r="1.2"/>
+    <circle cx="640" cy="520" r="0.8"/>
+  </g>
+
+  <!-- Soft ring -->
+  <circle cx="400" cy="310" r="240" fill="none" stroke="#7EC8FF" stroke-width="1" opacity="0.18" stroke-dasharray="4 6"/>
+
+  <!-- Globe -->
+  <g transform="translate(400 310)">
+    <!-- Outer ring -->
+    <circle r="190" fill="none" stroke="#2A52FF" stroke-width="1.4" opacity="0.5"/>
+    <!-- Globe body -->
+    <circle r="160" fill="url(#gl-globe)"/>
+    <!-- Highlight -->
+    <ellipse cx="-50" cy="-70" rx="80" ry="50" fill="#FFFFFF" opacity="0.15"/>
+    <!-- Meridian lines -->
+    <g fill="none" stroke="#7EC8FF" stroke-width="0.9" opacity="0.5">
+      <ellipse rx="160" ry="160"/>
+      <ellipse rx="80"  ry="160"/>
+      <ellipse rx="160" ry="60"/>
+      <ellipse rx="120" ry="160"/>
+      <ellipse rx="160" ry="120"/>
+    </g>
+    <!-- Continents (stylized) -->
+    <g fill="url(#gl-continent)">
+      <!-- "Americas" -->
+      <path d="M-110 -60 Q-90 -90 -50 -80 Q-30 -50 -50 -10 Q-70 10 -100 30 Q-120 0 -110 -60 Z"/>
+      <!-- "Africa/Europe" -->
+      <path d="M-20 -80 Q20 -90 50 -70 Q60 -40 30 0 Q-10 10 -20 -30 Q-30 -60 -20 -80 Z"/>
+      <!-- "Asia/Oceania" -->
+      <path d="M40 0 Q90 -10 110 20 Q120 60 80 80 Q40 70 30 30 Z"/>
+    </g>
+    <!-- Location pins -->
+    <g>
+      <g transform="translate(-70 -20)">
+        <circle r="6" fill="#FF8A6B"/>
+        <circle r="14" fill="none" stroke="#FF8A6B" stroke-width="1.4" opacity="0.6"/>
+      </g>
+      <g transform="translate(20 -40)">
+        <circle r="6" fill="#FFD86B"/>
+        <circle r="14" fill="none" stroke="#FFD86B" stroke-width="1.4" opacity="0.6"/>
+      </g>
+      <g transform="translate(70 30)">
+        <circle r="6" fill="#6BE3B7"/>
+        <circle r="14" fill="none" stroke="#6BE3B7" stroke-width="1.4" opacity="0.6"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flight arcs -->
+  <g fill="none" stroke="#7EC8FF" stroke-width="1.2" opacity="0.6">
+    <path d="M150 220 Q300 80 470 180" stroke-dasharray="2 4"/>
+    <path d="M260 460 Q380 540 540 430" stroke-dasharray="2 4"/>
+    <path d="M620 220 Q540 100 420 160" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Floating stat cards -->
+  <g transform="translate(80 110)">
+    <rect width="140" height="60" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <rect x="12" y="12" width="36" height="36" rx="10" fill="url(#gl-accent)"/>
+    <text x="30" y="36" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+          font-size="16" font-weight="700" fill="#FFFFFF">32</text>
+    <text x="58" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#FFFFFF">Countries</text>
+    <text x="58" y="44" font-family="Inter, system-ui, sans-serif"
+          font-size="9" fill="#A6ADBE">Active users</text>
+  </g>
+
+  <g transform="translate(580 110)">
+    <rect width="140" height="60" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <rect x="12" y="12" width="36" height="36" rx="10" fill="#FF8A6B"/>
+    <text x="30" y="36" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+          font-size="14" font-weight="700" fill="#FFFFFF">★</text>
+    <text x="58" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#FFFFFF">4.6 avg</text>
+    <text x="58" y="44" font-family="Inter, system-ui, sans-serif"
+          font-size="9" fill="#A6ADBE">Across stores</text>
+  </g>
+
+  <g transform="translate(80 430)">
+    <rect width="160" height="60" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <rect x="12" y="12" width="36" height="36" rx="10" fill="#6BE3B7"/>
+    <text x="30" y="36" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+          font-size="14" font-weight="700" fill="#0A0D14">EN</text>
+    <text x="58" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#FFFFFF">14 languages</text>
+    <text x="58" y="44" font-family="Inter, system-ui, sans-serif"
+          font-size="9" fill="#A6ADBE">Localized apps</text>
+  </g>
+
+  <g transform="translate(560 430)">
+    <rect width="160" height="60" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <rect x="12" y="12" width="36" height="36" rx="10" fill="#C5A8FF"/>
+    <text x="30" y="36" text-anchor="middle" font-family="Inter, system-ui, sans-serif"
+          font-size="14" font-weight="700" fill="#0A0D14">24/7</text>
+    <text x="58" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#FFFFFF">Follow-the-sun</text>
+    <text x="58" y="44" font-family="Inter, system-ui, sans-serif"
+          font-size="9" fill="#A6ADBE">EU · US · APAC</text>
+  </g>
+
+  <!-- Mascots around the globe -->
+  <g transform="translate(60 240)">
+    <use href="#gl-fox" x="0" y="0" width="120" height="120"/>
+  </g>
+  <g transform="translate(620 240)">
+    <use href="#gl-panda" x="0" y="0" width="120" height="120"/>
+  </g>
+  <g transform="translate(160 480)">
+    <use href="#gl-cat" x="0" y="0" width="100" height="100"/>
+  </g>
+  <g transform="translate(540 480)">
+    <use href="#gl-rabbit" x="0" y="0" width="100" height="100"/>
+  </g>
+</svg>

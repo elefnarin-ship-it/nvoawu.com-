@@ -1,0 +1,322 @@
+/* =========================================================================
+   N VoaWu — animations.css
+   Keyframes, scroll-reveal classes, parallax hooks, mascot motion.
+   ========================================================================= */
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+@keyframes hero-float-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(40px, -30px) scale(1.06); }
+}
+
+@keyframes hero-float-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-30px, 20px) scale(1.08); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.4); opacity: 0.6; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+  50%      { opacity: 1;   transform: scale(1.2) rotate(20deg); }
+}
+
+@keyframes mascot-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-6px) rotate(2deg); }
+}
+
+@keyframes mascot-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-4deg); }
+  75%      { transform: rotate(4deg); }
+}
+
+@keyframes mascot-wave {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(-15deg); }
+  40%      { transform: rotate(20deg); }
+  60%      { transform: rotate(-10deg); }
+  80%      { transform: rotate(15deg); }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--color-accent-glow); }
+  50%      { box-shadow: 0 0 0 16px rgba(42, 82, 255, 0); }
+}
+
+@keyframes draw-stroke {
+  from { stroke-dashoffset: var(--stroke-len, 1000); }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%           { transform: scaleY(0.1); }
+}
+
+/* ============================================================
+   Scroll-reveal
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms var(--ease-emphasized),
+              transform 700ms var(--ease-emphasized);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--left  { transform: translateX(-28px); }
+.reveal--left.is-visible { transform: translateX(0); }
+
+.reveal--right { transform: translateX(28px); }
+.reveal--right.is-visible { transform: translateX(0); }
+
+.reveal--scale { transform: scale(0.94); }
+.reveal--scale.is-visible { transform: scale(1); }
+
+.reveal--delay-1 { transition-delay: 80ms; }
+.reveal--delay-2 { transition-delay: 160ms; }
+.reveal--delay-3 { transition-delay: 240ms; }
+.reveal--delay-4 { transition-delay: 320ms; }
+.reveal--delay-5 { transition-delay: 400ms; }
+.reveal--delay-6 { transition-delay: 480ms; }
+
+/* ============================================================
+   Parallax hooks
+   ============================================================ */
+.parallax {
+  --parallax-y: 0px;
+  --parallax-x: 0px;
+  transform: translate3d(var(--parallax-x), var(--parallax-y), 0);
+  transition: transform 80ms linear;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax { transform: none !important; }
+}
+
+/* Hero mascot — wave on load */
+.hero__mascot {
+  animation: mascot-wave 3.2s ease-in-out 0.4s 1;
+  transform-origin: 60% 90%;
+}
+
+.hero__mascot--tail {
+  animation: mascot-wiggle 4s ease-in-out infinite;
+  transform-origin: 30% 50%;
+}
+
+.hero__mascot--scarf {
+  animation: mascot-wiggle 5s ease-in-out infinite reverse;
+  transform-origin: 50% 0%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__mascot,
+  .hero__mascot--tail,
+  .hero__mascot--scarf { animation: none; }
+}
+
+/* Mascot card art — bob */
+.mascot-card__art {
+  animation: mascot-bob 4s ease-in-out infinite;
+}
+
+.mascot-card:nth-child(2) .mascot-card__art { animation-delay: 0.2s; }
+.mascot-card:nth-child(3) .mascot-card__art { animation-delay: 0.4s; }
+.mascot-card:nth-child(4) .mascot-card__art { animation-delay: 0.6s; }
+.mascot-card:nth-child(5) .mascot-card__art { animation-delay: 0.8s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-card__art { animation: none; }
+}
+
+/* CTA art */
+.cta-card__art svg {
+  animation: float-y 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-card__art svg { animation: none; }
+}
+
+/* Animated stat value (count-up) */
+.stat__value { font-variant-numeric: tabular-nums; }
+
+/* Subtle background mesh drift on dark sections */
+.section--gradient::before,
+.section--dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(42, 82, 255, 0.18), transparent 50%),
+              radial-gradient(circle at 80% 30%, rgba(197, 168, 255, 0.12), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--gradient > *,
+.section--dark > * { position: relative; z-index: 1; }
+
+/* Sticky scroll section utility */
+.sticky-section {
+  position: sticky;
+  top: var(--header-h);
+}
+
+/* Animated SVG strokes */
+.stroke-anim path,
+.stroke-anim line,
+.stroke-anim circle,
+.stroke-anim rect,
+.stroke-anim polyline {
+  stroke-dasharray: var(--stroke-len, 1000);
+  stroke-dashoffset: var(--stroke-len, 1000);
+  transition: stroke-dashoffset 1.6s var(--ease-emphasized);
+}
+
+.stroke-anim.is-visible path,
+.stroke-anim.is-visible line,
+.stroke-anim.is-visible circle,
+.stroke-anim.is-visible rect,
+.stroke-anim.is-visible polyline {
+  stroke-dashoffset: 0;
+}
+
+/* "Live" indicator pulse */
+.is-live::after {
+  content: "";
+  display: inline-block;
+  width: 8px; height: 8px;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 0 0 var(--color-success);
+  animation: glow-pulse 2s ease-out infinite;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-live::after { animation: none; }
+}
+
+/* Glowing gradient headline accent */
+.gradient-text-cool {
+  background: var(--gradient-text-cool);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-warm {
+  background: var(--gradient-text-warm);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card entrance stagger via CSS variable */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms var(--ease-emphasized),
+              transform 600ms var(--ease-emphasized);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Mascot interaction bubbles (added by mascots.js)
+   ============================================================ */
+.mascot-bubble {
+  position: absolute;
+  top: 8%;
+  right: 6%;
+  background: var(--color-ink-900);
+  color: var(--color-pure);
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(8px) scale(0.9);
+  transition: opacity 240ms var(--ease-emphasized),
+              transform 240ms var(--ease-spring);
+  pointer-events: none;
+}
+
+.mascot-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 18px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-ink-900);
+  transform: rotate(45deg);
+  border-radius: 0 0 2px 0;
+}
+
+.mascot-card { position: relative; }
+.hero__art-mascot { position: relative; }
+
+.mascot-bubble:not(.is-out) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.mascot-bubble.is-out {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+}
+
+.is-wobble .mascot-card__art,
+.is-wobble .hero__art-mascot svg {
+  animation: mascot-wiggle 0.5s ease-in-out 2 !important;
+}

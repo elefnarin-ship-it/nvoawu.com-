@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  N VoaWu — favicon (square mark, 64x64 viewBox).
+  Reuses the same N-chevron geometry as logo.svg, with the studio's
+  gradient plate for visual punch at small sizes.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     role="img"
+     aria-label="N VoaWu">
+  <title>N VoaWu</title>
+  <defs>
+    <linearGradient id="fav-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0D14"/>
+      <stop offset="1" stop-color="#1A1F2C"/>
+    </linearGradient>
+    <linearGradient id="fav-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A52FF"/>
+      <stop offset="1" stop-color="#7EC8FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Plate -->
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#fav-bg)"/>
+  <!-- N strokes -->
+  <g stroke="url(#fav-accent)" stroke-width="6" stroke-linecap="square"
+     stroke-linejoin="miter" fill="none">
+    <line x1="16" y1="13" x2="16" y2="51"/>
+    <line x1="16" y1="13" x2="46" y2="51"/>
+    <line x1="46" y1="13" x2="46" y2="38"/>
+  </g>
+  <!-- Forward chevron -->
+  <g stroke="url(#fav-accent)" stroke-width="6" stroke-linecap="square"
+     stroke-linejoin="miter" fill="none">
+    <polyline points="38,32 52,32 52,46"/>
+  </g>
+  <!-- Orbit dot -->
+  <circle cx="52" cy="20" r="2.2" fill="#7EC8FF"/>
+</svg>

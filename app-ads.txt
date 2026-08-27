@@ -1,0 +1,5 @@
+# app-ads.txt for N VoaWu Studio
+# This file is served from the root of nvoawu.com.
+# The line below is a placeholder — replace the publisher ID (pub-XXXXXXXXXXXXXXXX)
+# with the actual Google AdMob publisher ID after registration.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

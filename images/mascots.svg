@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  N VoaWu — Mascot set (5 friendly animals).
+  Each mascot is exposed as a <symbol id="mascot-..."> with its own
+  viewBox (200x200) so it can be <use>'d at any size. A tiny
+  embedded stylesheet adds a gentle idle-bob + hover wiggle; it is
+  scoped to the symbol's root group via class names so multiple
+  mascots on the same page animate independently.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     style="display:none"
+     aria-hidden="true">
+
+  <defs>
+    <style>
+      /* Idle bob */
+      .mascot-body { transform-box: fill-box; transform-origin: 50% 90%;
+                     animation: bob 3.4s var(--ease-standard, ease-in-out) infinite; }
+      /* Hover wiggle (uses :hover on the host <svg class="mascot">) */
+      .mascot-host:hover .mascot-body,
+      svg.mascot:hover .mascot-body { animation: wiggle 0.7s var(--ease-spring, ease-out) 1; }
+      .mascot-host:hover .mascot-ear-l,
+      svg.mascot:hover .mascot-ear-l { animation: earL 0.7s var(--ease-spring, ease-out) 1; transform-origin: 50% 100%; }
+      .mascot-host:hover .mascot-ear-r,
+      svg.mascot:hover .mascot-ear-r { animation: earR 0.7s var(--ease-spring, ease-out) 1; transform-origin: 50% 100%; }
+      @keyframes bob    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+      @keyframes wiggle { 0%,100%{transform:rotate(0)} 25%{transform:rotate(-6deg)} 75%{transform:rotate(6deg)} }
+      @keyframes earL   { 0%,100%{transform:rotate(0)} 50%{transform:rotate(-10deg)} }
+      @keyframes earR   { 0%,100%{transform:rotate(0)} 50%{transform:rotate(10deg)} }
+      @media (prefers-reduced-motion: reduce) {
+        .mascot-body, .mascot-ear-l, .mascot-ear-r { animation: none !important; }
+      }
+    </style>
+
+    <!-- ===== Fox ===== -->
+    <symbol id="mascot-fox" viewBox="0 0 200 200">
+      <g class="mascot-body">
+        <!-- Ears (back) -->
+        <polygon class="mascot-ear-l" points="52,42 70,28 78,72" fill="#FF8A6B"/>
+        <polygon class="mascot-ear-r" points="148,42 130,28 122,72" fill="#FF8A6B"/>
+        <polygon class="mascot-ear-l" points="58,46 70,34 75,66" fill="#FFC2A1"/>
+        <polygon class="mascot-ear-r" points="142,46 130,34 125,66" fill="#FFC2A1"/>
+        <!-- Head -->
+        <path d="M40 90 Q40 30 100 30 Q160 30 160 90 Q160 150 100 165 Q40 150 40 90 Z"
+              fill="#FF8A6B"/>
+        <!-- Cheek/muzzle white -->
+        <path d="M64 116 Q100 156 136 116 Q132 144 100 158 Q68 144 64 116 Z"
+              fill="#FFF7F2"/>
+        <!-- Eyes -->
+        <circle cx="78" cy="92" r="8" fill="#1A1F2C"/>
+        <circle cx="122" cy="92" r="8" fill="#1A1F2C"/>
+        <circle cx="80" cy="89" r="2.4" fill="#FFFFFF"/>
+        <circle cx="124" cy="89" r="2.4" fill="#FFFFFF"/>
+        <!-- Cheeks -->
+        <circle cx="70" cy="116" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <circle cx="130" cy="116" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <!-- Nose -->
+        <ellipse cx="100" cy="118" rx="5" ry="3.5" fill="#1A1F2C"/>
+        <!-- Smile -->
+        <path d="M88 130 Q100 142 112 130" fill="none"
+              stroke="#1A1F2C" stroke-width="2.6" stroke-linecap="round"/>
+      </g>
+    </symbol>
+
+    <!-- ===== Panda ===== -->
+    <symbol id="mascot-panda" viewBox="0 0 200 200">
+      <g class="mascot-body">
+        <!-- Ears (black) -->
+        <circle class="mascot-ear-l" cx="60" cy="60" r="20" fill="#1A1F2C"/>
+        <circle class="mascot-ear-r" cx="140" cy="60" r="20" fill="#1A1F2C"/>
+        <!-- Head (white) -->
+        <circle cx="100" cy="105" r="65" fill="#F6F7FB"/>
+        <!-- Eye patches -->
+        <ellipse cx="76" cy="100" rx="18" ry="22" fill="#1A1F2C"
+                 transform="rotate(-15 76 100)"/>
+        <ellipse cx="124" cy="100" rx="18" ry="22" fill="#1A1F2C"
+                 transform="rotate(15 124 100)"/>
+        <!-- Eyes -->
+        <circle cx="78" cy="103" r="6" fill="#F6F7FB"/>
+        <circle cx="122" cy="103" r="6" fill="#F6F7FB"/>
+        <circle cx="79" cy="104" r="3" fill="#1A1F2C"/>
+        <circle cx="123" cy="104" r="3" fill="#1A1F2C"/>
+        <!-- Nose -->
+        <ellipse cx="100" cy="124" rx="5" ry="3.5" fill="#1A1F2C"/>
+        <!-- Mouth -->
+        <path d="M90 134 Q100 142 110 134" fill="none"
+              stroke="#1A1F2C" stroke-width="2.6" stroke-linecap="round"/>
+        <!-- Cheek blush -->
+        <circle cx="60" cy="128" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <circle cx="140" cy="128" r="6" fill="#FFB3D1" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- ===== Cat ===== -->
+    <symbol id="mascot-cat" viewBox="0 0 200 200">
+      <g class="mascot-body">
+        <!-- Ears (triangles) -->
+        <polygon class="mascot-ear-l" points="55,80 65,28 100,68" fill="#7EC8FF"/>
+        <polygon class="mascot-ear-r" points="145,80 135,28 100,68" fill="#7EC8FF"/>
+        <polygon class="mascot-ear-l" points="65,68 72,40 90,64" fill="#C5A8FF"/>
+        <polygon class="mascot-ear-r" points="135,68 128,40 110,64" fill="#C5A8FF"/>
+        <!-- Head -->
+        <path d="M44 100 Q44 40 100 40 Q156 40 156 100 Q156 158 100 170 Q44 158 44 100 Z"
+              fill="#7EC8FF"/>
+        <!-- Inner face -->
+        <path d="M64 116 Q100 158 136 116 Q132 144 100 156 Q68 144 64 116 Z"
+              fill="#F0F7FF"/>
+        <!-- Eyes -->
+        <ellipse cx="80"  cy="98" rx="6" ry="9" fill="#1A1F2C"/>
+        <ellipse cx="120" cy="98" rx="6" ry="9" fill="#1A1F2C"/>
+        <circle cx="81"  cy="94" r="1.8" fill="#FFFFFF"/>
+        <circle cx="121" cy="94" r="1.8" fill="#FFFFFF"/>
+        <!-- Nose -->
+        <path d="M96 118 L104 118 L100 124 Z" fill="#FF8A6B"/>
+        <!-- Whiskers -->
+        <line x1="70" y1="124" x2="50" y2="122" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="70" y1="130" x2="50" y2="132" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="130" y1="124" x2="150" y2="122" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="130" y1="130" x2="150" y2="132" stroke="#1A1F2C" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Mouth -->
+        <path d="M100 124 Q92 134 88 132" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M100 124 Q108 134 112 132" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+        <!-- Cheeks -->
+        <circle cx="60" cy="118" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <circle cx="140" cy="118" r="6" fill="#FFB3D1" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- ===== Bear ===== -->
+    <symbol id="mascot-bear" viewBox="0 0 200 200">
+      <g class="mascot-body">
+        <!-- Ears -->
+        <circle class="mascot-ear-l" cx="56" cy="62" r="18" fill="#A37A4A"/>
+        <circle class="mascot-ear-r" cx="144" cy="62" r="18" fill="#A37A4A"/>
+        <circle class="mascot-ear-l" cx="56" cy="64" r="9" fill="#E0B98A"/>
+        <circle class="mascot-ear-r" cx="144" cy="64" r="9" fill="#E0B98A"/>
+        <!-- Head -->
+        <circle cx="100" cy="108" r="66" fill="#B58858"/>
+        <!-- Muzzle -->
+        <ellipse cx="100" cy="128" rx="34" ry="24" fill="#E0B98A"/>
+        <!-- Eyes -->
+        <circle cx="80"  cy="98" r="6" fill="#1A1F2C"/>
+        <circle cx="120" cy="98" r="6" fill="#1A1F2C"/>
+        <circle cx="82"  cy="95" r="1.8" fill="#FFFFFF"/>
+        <circle cx="122" cy="95" r="1.8" fill="#FFFFFF"/>
+        <!-- Nose -->
+        <ellipse cx="100" cy="122" rx="6" ry="4" fill="#1A1F2C"/>
+        <!-- Mouth -->
+        <path d="M92 134 Q100 142 108 134" fill="none" stroke="#1A1F2C" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M100 128 L100 134" stroke="#1A1F2C" stroke-width="2" stroke-linecap="round"/>
+        <!-- Cheeks -->
+        <circle cx="62" cy="122" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <circle cx="138" cy="122" r="6" fill="#FFB3D1" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- ===== Rabbit ===== -->
+    <symbol id="mascot-rabbit" viewBox="0 0 200 200">
+      <g class="mascot-body">
+        <!-- Ears (long) -->
+        <ellipse class="mascot-ear-l" cx="76"  cy="44" rx="14" ry="36" fill="#F6F7FB"/>
+        <ellipse class="mascot-ear-r" cx="124" cy="44" rx="14" ry="36" fill="#F6F7FB"/>
+        <ellipse class="mascot-ear-l" cx="76"  cy="48" rx="7"  ry="24" fill="#FFB3D1"/>
+        <ellipse class="mascot-ear-r" cx="124" cy="48" rx="7"  ry="24" fill="#FFB3D1"/>
+        <!-- Head -->
+        <circle cx="100" cy="118" r="58" fill="#F6F7FB"/>
+        <!-- Cheeks/jowls -->
+        <ellipse cx="100" cy="140" rx="42" ry="22" fill="#F0F2F8"/>
+        <!-- Eyes -->
+        <ellipse cx="82"  cy="112" rx="5" ry="7" fill="#1A1F2C"/>
+        <ellipse cx="118" cy="112" rx="5" ry="7" fill="#1A1F2C"/>
+        <circle cx="83"  cy="108" r="1.6" fill="#FFFFFF"/>
+        <circle cx="119" cy="108" r="1.6" fill="#FFFFFF"/>
+        <!-- Nose -->
+        <path d="M96 130 L104 130 L100 136 Z" fill="#FF8A6B"/>
+        <!-- Mouth -->
+        <path d="M100 136 Q94 144 90 142" fill="none" stroke="#1A1F2C" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M100 136 Q106 144 110 142" fill="none" stroke="#1A1F2C" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- Tooth -->
+        <rect x="96" y="140" width="3" height="6" fill="#FFFFFF" stroke="#1A1F2C" stroke-width="1"/>
+        <rect x="101" y="140" width="3" height="6" fill="#FFFFFF" stroke="#1A1F2C" stroke-width="1"/>
+        <!-- Cheeks -->
+        <circle cx="64" cy="132" r="6" fill="#FFB3D1" opacity="0.7"/>
+        <circle cx="136" cy="132" r="6" fill="#FFB3D1" opacity="0.7"/>
+      </g>
+    </symbol>
+
+  </defs>
+</svg>

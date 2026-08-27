@@ -1,0 +1,22 @@
+{
+  "name": "N VoaWu Studio",
+  "short_name": "N VoaWu",
+  "description": "Independent app & mobile-management studio. Crafted in Europe. Played everywhere.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0D14",
+  "theme_color": "#0A0D14",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "productivity"]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Android-style store badge — non-trademarked rendition.
+  Uses a generic "Android Store" label to stay clear of brand guidelines.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img"
+     aria-label="Get it on Android Store">
+  <title>Get it on Android Store</title>
+  <rect x="0" y="0" width="200" height="60" rx="10"
+        fill="#0A0D14" stroke="#2A2F3D" stroke-width="1.2"/>
+  <!-- Stylised robot-mark: head + antennae + body silhouette, no Google marks. -->
+  <g transform="translate(14 12)">
+    <rect x="2"  y="10" width="32" height="22" rx="4" fill="#6BE3B7"/>
+    <rect x="0"  y="4"  width="36" height="10" rx="2" fill="#7EC8FF"/>
+    <circle cx="10" cy="9" r="2" fill="#0A0D14"/>
+    <circle cx="26" cy="9" r="2" fill="#0A0D14"/>
+    <line x1="8"  y1="2" x2="6"  y2="-2" stroke="#FFD86B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="28" y1="2" x2="30" y2="-2" stroke="#FFD86B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="14" y1="32" x2="14" y2="36" stroke="#6BE3B7" stroke-width="3" stroke-linecap="round"/>
+    <line x1="22" y1="32" x2="22" y2="36" stroke="#6BE3B7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g font-family="'Inter','Space Grotesk',system-ui,sans-serif" fill="#FFFFFF">
+    <text x="64" y="24" font-size="9" font-weight="500" fill="#A6ADBE" letter-spacing="0.6">GET IT ON</text>
+    <text x="64" y="44" font-size="17" font-weight="700">Android Store</text>
+  </g>
+</svg>
